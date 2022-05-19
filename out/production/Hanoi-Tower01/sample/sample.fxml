@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Cylinder?>
+
+<StackPane fx:id="SamStack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane fx:id="PaneSec" prefHeight="545.0" prefWidth="800.0">
+         <children>
+            <Cylinder fx:id="Peg1" accessibleRole="IMAGE_VIEW" blendMode="DARKEN" height="380.0" layoutX="207.0" layoutY="247.0" radius="20">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Cylinder>
+            <JFXTextField editable="false" focusColor="WHITE" layoutX="176.0" layoutY="437.0" prefHeight="31.0" prefWidth="63.0" style="-fx-text-inner-color: white; -fx-allignment: center;" text="Peg one" />
+            <JFXTextField editable="false" focusColor="WHITE" layoutX="384.0" layoutY="437.0" prefHeight="31.0" prefWidth="63.0" style="-fx-text-inner-color: white; -fx-allignment: center;" text="Peg two" />
+            <JFXTextField editable="false" focusColor="WHITE" layoutX="569.0" layoutY="437.0" prefHeight="31.0" prefWidth="63.0" style="-fx-text-inner-color: white; -fx-allignment: center;" text="Peg three" />
+            <Cylinder accessibleRole="IMAGE_VIEW" blendMode="DARKEN" height="380.0" layoutX="601.0" layoutY="246.0" radius="20">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Cylinder>
+            <Cylinder accessibleRole="IMAGE_VIEW" blendMode="DARKEN" height="380.0" layoutX="411.0" layoutY="246.0" radius="20">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Cylinder>
+            <JFXButton layoutX="163.0" layoutY="494.0" onMouseClicked="#Manual" style="-fx-text-fill: #ffffff;" text="Manual Move" />
+            <JFXButton fx:id="StartTimer" layoutX="301.0" layoutY="494.0" onAction="#timerClicked" onMouseClicked="#StartTimer" style="-fx-text-fill: white;" text="Start/End Timer" />
+            <JFXButton layoutX="467.0" layoutY="494.0" onAction="#toEnd" onMouseClicked="#StartTimer" style="-fx-text-fill: white;" text="End" />
+            <JFXButton layoutX="581.0" layoutY="494.0" onAction="#reStart" onMouseClicked="#StartTimer" style="-fx-text-fill: white;" text="Restart" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>
